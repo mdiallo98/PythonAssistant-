@@ -20,6 +20,7 @@ while True:
     if event == sg.WIN_CLOSED or event == 'Cancel':  # if user closes window or clicks cancel
         break
     res = client.query(values[0])
-    print(next(res.results).text)
+    sg.Popup(next(res.results).text)
+
 
 window.close()
